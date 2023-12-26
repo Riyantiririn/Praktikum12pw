@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang</title>
+</head>
+<body>
+    <h1>Konversi Mata Uang ke Rupiah (15%)</h1>
+    <form method="post">
+        <label for="nilai_mata_uang">Nilai Mata Uang Asing:</label>
+        <input type="number" name="nilai_mata_uang" required>
+        
+        <label for="valas">Mata Uang Asing:</label>
+        <select name="valas" required>
+            <option value="USD">Dollar US</option>
+            <option value="SGD">Dollar Singapore</option>
+            <option value="MYR">Ringgit Malaysia</option>
+            <option value="JPY">Yen Jepang</option>
+            <option value="EUR">Euro</option>
+            <option value="SAR">Riyal Arab Saudi</option>
+        </select>
+
+        <button type="submit">Konversi</button>
+    </form>
+
+    {% if nilai_rupiah is not none %}
+        <p>Hasil konversi {{ nilai_mata_uang }} {{ valas }} ke Rupiah: {{ nilai_rupiah }}</p>
+    {% endif %}
+</body>
+</html>
